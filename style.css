@@ -1,0 +1,225 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #fd79a8;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --success: #00b894;
+    --warning: #fdcb6e;
+    --danger: #d63031;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.block {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary);
+}
+
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+h1 {
+    text-align: center;
+    padding: 40px 0 20px;
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--dark);
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary);
+    font-weight: 600;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+button.secondary {
+    background-color: var(--secondary);
+}
+
+button.secondary:hover {
+    background-color: var(--primary);
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    margin: 8px 0;
+    width: 100%;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.calculator input {
+    grid-column: span 4;
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.calculator button {
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.calculator .span-2 {
+    grid-column: span 2;
+}
+
+#colorBox {
+    height: 100px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 2px solid #dfe6e9;
+    transition: background-color 0.3s;
+}
+
+#circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.name-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.name-display {
+    padding: 20px;
+    background-color: var(--light);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+.result-display {
+    padding: 15px;
+    background-color: var(--light);
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.prime-display {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: var(--light);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.grade-table th {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-table td {
+    padding: 10px;
+    border-bottom: 1px solid #dfe6e9;
+}
+
+.grade-table tr:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.eligibility-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.eligible {
+    background-color: var(--success);
+    color: white;
+}
+
+.not-eligible {
+    background-color: var(--danger);
+    color: white;
+}

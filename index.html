@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>JS Project Saumya Parashar</h1>
+    <div class="container">
+
+        <div class="block">
+            <h2>Prime Numbers</h2>
+            <div>
+                <input type="number" id="primeLimit" placeholder="Enter limit">
+                <button onclick="printPrimes()">Generate Primes</button>
+                <div class="prime-display" id="primeRes"></div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Voting Eligibility</h2>
+            <div>
+                <input type="number" id="age" placeholder="Enter your age">
+                <button onclick="checkAge()">Check Eligibility</button>
+                <span id="ageRes"></span>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Grade Calculator</h2>
+            <div>
+                <button onclick="calcGrade()">Generate Sample Grades</button>
+                <div class="result-display" id="gradeOutput"></div>
+                <table class="grade-table">
+                    <thead>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gradeTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Contact Form</h2>
+            <div class="form-container">
+                <input type="text" placeholder="Full Name" id="name">
+                <input type="email" placeholder="Email Address" id="email">
+                <input type="tel" placeholder="Contact Number" id="contact">
+                <input type="text" placeholder="Roll Number" id="rollNo">
+                <button onclick="submitForm()">Submit Form</button>
+                <div id="formResponse" class="result-display"></div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Multiplication</h2>
+            <div>
+                <input type="number" id="m1" placeholder="First number"> 
+                <span style="font-size: 1.2rem;">×</span> 
+                <input type="number" id="m2" placeholder="Second number"> 
+                <button onclick="multiply()">Calculate</button> 
+                <div class="result-display" id="mRes"></div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Name Editor</h2>
+            <div class="name-editor">
+                <textarea id="nameInput" placeholder="Enter your name"></textarea>
+                <div class="name-display" id="nameDisplay">No name saved yet</div>
+                <div>
+                    <button onclick="saveName()">Save Name</button>
+                    <button class="secondary" onclick="showSavedName()">Show Saved Name</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Color Mixer</h2>
+            <div>
+                <div style="margin-bottom: 8px;">
+                    <label for="r">Red:</label>
+                    <input type="range" id="r" min="0" max="255" value="120" oninput="mix()" style="width: 100%;">
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <label for="g">Green:</label>
+                    <input type="range" id="g" min="0" max="255" value="80" oninput="mix()" style="width: 100%;">
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <label for="b">Blue:</label>
+                    <input type="range" id="b" min="0" max="255" value="200" oninput="mix()" style="width: 100%;">
+                </div>
+                <div id="colorBox"></div>
+                <div id="rgbValue" style="text-align: center; margin-top: 8px; font-family: monospace;"></div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Color Changing Circle</h2>
+            <div>
+                <div id="circle" onclick="changeColor()">Click Me!</div>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="calcDisplay" readonly>
+                <button onclick="clearCalculator()">C</button>
+                <button onclick="backspace()">⌫</button>
+                <button onclick="appendToCalc('%')">%</button>
+                <button onclick="appendToCalc('/')">/</button>
+                <button onclick="appendToCalc('7')">7</button>
+                <button onclick="appendToCalc('8')">8</button>
+                <button onclick="appendToCalc('9')">9</button>
+                <button onclick="appendToCalc('*')">×</button>
+                <button onclick="appendToCalc('4')">4</button>
+                <button onclick="appendToCalc('5')">5</button>
+                <button onclick="appendToCalc('6')">6</button>
+                <button onclick="appendToCalc('-')">-</button>
+                <button onclick="appendToCalc('1')">1</button>
+                <button onclick="appendToCalc('2')">2</button>
+                <button onclick="appendToCalc('3')">3</button>
+                <button onclick="appendToCalc('+')">+</button>
+                <button onclick="appendToCalc('0')" class="span-2">0</button>
+                <button onclick="appendToCalc('.')">.</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Alert Button</h2>
+            <div>
+                <button onclick="showCustomAlert()">Show Custom Alert</button>
+            </div>
+        </div>
+
+        <div class="block">
+            <h2>Even or Odd</h2>
+            <div>
+                <input type="number" id="eo" placeholder="Enter a number">
+                <button onclick="checkEvenOdd()">Check</button>
+                <div class="result-display" id="eoRes"></div>
+            </div>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
